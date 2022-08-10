@@ -1,0 +1,104 @@
+@font-face {
+    src: url('/TTF/CursedTimerUlil-Aznm.ttf');
+    font-family: 'Cursed Timer ULiL';
+}
+
+:root {
+    --main: #1B244A;
+    --secondary: #EEEEEE;
+    --hightlight: #9AABD8;
+    --dark: #080001;
+    --red: #F94F6D;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--main);
+}
+
+.container {
+    max-width: 410px;
+    margin-inline: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 6.25em;
+    margin-bottom: 2em;
+}
+
+/* === Typegraphy === */
+
+h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* === Score Tally === */
+
+.score {
+    width: 155px;
+    height: 120px;
+    background-color: var(--dark);
+    border-radius: 5px;
+    padding: .17em;
+    margin: 0.25em 0;
+    text-align: right;
+    font-family: 'Cursed Timer ULiL';
+    font-size: 5.625rem;
+    font-weight: 400;
+    color: var(--red);
+}
+
+.winning {
+    border: 5px solid green;
+}
+
+/* === Button === */
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    width: fit-content;
+    padding: 0 .5em;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid var(--hightlight);
+    border-radius: 5px;
+    font-family: 'Cursed Timer ULiL';
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--hightlight);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#reset-btn {
+    width: 100%;
+    margin-inline: auto;
+}
+
+/* === Media Queries === */
+
+@media (max-width: 420px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
